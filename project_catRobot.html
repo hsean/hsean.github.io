@@ -5,15 +5,30 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Bootstrap 101 Template</title>
+    <title>Default Webpage Template</title>
 
     <!-- Bootstrap -->
     
     <!-- fix for navbar-fixed-top covering content -->
     <style type="text/css">
       body {
-        padding-top: 60px;
+        padding-top: 50px;
+        padding-bottom: 0px;
       } 
+      
+      <!-- used to remove side gutters from row -->
+      .no-gutter > [class*='col-'] {
+        padding-right:0;
+        padding-left:0;
+      }
+      
+      .background-grey{
+        background-color: #f4f4f4
+      }
+      
+      .background-white{
+        background-color: #ffffff;
+      }
     </style>
     <link href="css/bootstrap.min.css" rel="stylesheet">
 
@@ -25,56 +40,121 @@
     <![endif]-->
   </head>
   <body>
-	<!-- NAVIGATION BAR -->
-	<div class="container">
-	  <nav class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="http://hsean.github.io"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
-        </div>
+  
+    <!-- NAVIGATION BAR -->
+    <div class="container">
+      <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="container">
+          <!-- Brand and toggle get grouped for better mobile display -->
+          <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"></span></a>
+          </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav navbar-nav">
-            <li><a href="index.html">About</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li class="dropdown active">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="project_selfLevelingTable.html">Project: Self Leveling Table</a></li>
-                <li><a href="project_realsenseObjectSegmentation.html">Project: PCL Object Segmentation</a></li>
-                <li class="active"><a href="#">Project: Schrodinger's Cat Robot<span class="sr-only">(current)</span></a></li>
-              </ul>
-            </li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-	  </nav>
-	</div><!-- ./container -->	
-	<!-- PAGE CONTENT -->
-	<div class="container">
-    <div class="row">
-      <div class="col-md-6 col-sm-8">
-        <h2>Project: Schrodinger's Cat Robot</h2>
-        <p>Donec id elit non mi porta gravida at eget metus. Fusce dapibus, 
-        tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum 
-        massa justo sit amet risus. Etiam porta sem malesuada magna mollis 
-        euismod. Donec sed odio dui. </p>
+          <!-- Collect the nav links, forms, and other content for toggling -->
+          <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+              <li><a href="index.html">About</a></li>
+              <li><a href="resources.html">Resources</a></li>
+              <li class="dropdown active">
+                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Projects <span class="caret"></span></a>
+                <ul class="dropdown-menu">
+                  <li><a href="project_selfLevelingTable.html">Project: Self Leveling Table</a></li>
+                  <li><a href="project_realsenseObjectSegmentation.html">Project: PCL Object Segmentation</a></li>
+                  <li class="active"><a href="#">Project: Schrodinger's Cat Robot<span class="sr-only">(current)</span></a></li>
+                </ul>
+              </li>
+            </ul>
+          </div><!-- /.navbar-collapse -->
+        </div><!-- /.container -->
+      </nav>
+    </div><!-- ./container -->
+    
+    <!-- PAGE CONTENT -->
+    <div class="container-fluid background-grey" style="padding-left:0px; padding-right:0px;">
+      <div class="container background-white" style="padding-bottom:15px; margin-bottom:10px" >
+        <!-- CONTENT: PROJECT INTRO -->
+        <div class="jumbotron" style="margin-top: 10px">
+          <h1>Welcome to the Project!</h1>
+          <p>Duis dictum elit sed magna accumsan auctor. Quisque pretium dui 
+          turpis, laoreet facilisis mi dapibus sed. Cum sociis natoque penatibus
+          et magnis dis parturient montes, nascetur ridiculus mus. Cras et 
+          placerat eros. Maecenas urna erat, varius in lectus sit amet, porta 
+          fringilla enim. Aenean tempor dui ex, eget sollicitudin orci interdum 
+          sit amet.</p>
+          <p><a class="btn btn-primary btn-lg" href="#" role="button">Github Link</a></p>
+        </div>
+        <!-- CONTENT: PROJECT TEXT -->
+        <div class="row no-gutter">
+          <div class="col-md-6 col-sm-12">
+            <h2>Example Header</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc 
+            auctor quis lacus vitae lobortis. Sed a odio faucibus, tempus enim 
+            eget, ullamcorper leo. Aliquam erat volutpat. Nullam quis erat 
+            fringilla, ullamcorper tellus ac, cursus eros. Vivamus eleifend dui 
+            odio, vel euismod lacus elementum eget. Duis a gravida odio. Nullam 
+            ac nisi viverra, posuere nibh in, venenatis felis. Aliquam erat 
+            volutpat. Donec ut semper ipsum.</p>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <h2>Example Header</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc 
+            auctor quis lacus vitae lobortis. Sed a odio faucibus, tempus enim 
+            eget, ullamcorper leo. Aliquam erat volutpat. Nullam quis erat 
+            fringilla, ullamcorper tellus ac, cursus eros. Vivamus eleifend dui 
+            odio, vel euismod lacus elementum eget. Duis a gravida odio. Nullam 
+            ac nisi viverra, posuere nibh in, venenatis felis. Aliquam erat 
+            volutpat. Donec ut semper ipsum.</p>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <h2>Example Header</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc 
+            auctor quis lacus vitae lobortis. Sed a odio faucibus, tempus enim 
+            eget, ullamcorper leo. Aliquam erat volutpat. Nullam quis erat 
+            fringilla, ullamcorper tellus ac, cursus eros. Vivamus eleifend dui 
+            odio, vel euismod lacus elementum eget. Duis a gravida odio. Nullam 
+            ac nisi viverra, posuere nibh in, venenatis felis. Aliquam erat 
+            volutpat. Donec ut semper ipsum.</p>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <h2>Example Header</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc 
+            auctor quis lacus vitae lobortis. Sed a odio faucibus, tempus enim 
+            eget, ullamcorper leo. Aliquam erat volutpat. Nullam quis erat 
+            fringilla, ullamcorper tellus ac, cursus eros. Vivamus eleifend dui 
+            odio, vel euismod lacus elementum eget. Duis a gravida odio. Nullam 
+            ac nisi viverra, posuere nibh in, venenatis felis. Aliquam erat 
+            volutpat. Donec ut semper ipsum.</p>
+          </div>
+          <!-- CONTENT: PROJECT VIDEO -->
+          <div class="col-md-2"></div><!-- left video buffer -->
+          <div class="col-md-8">
+            <h2>Video Header</h2>
+            <p>Aliquam erat volutpat. Nullam quis erat 
+            fringilla, ullamcorper tellus ac, cursus eros. Vivamus eleifend dui 
+            odio, vel euismod lacus elementum eget.</p>
+            <!-- 16:9 aspect ratio -->
+            <div class="embed-responsive embed-responsive-16by9">
+              <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/X9otDixAtFw" allowfullscreen></iframe>
+            </div>
+          </div>
+          <div class="col-md-2"></div><!-- right video buffer -->
+        </div>
       </div>
     </div>
-	</div>
-		
     
+    <!-- PAGE FOOTER -->
+    <div class="navbar-inverse navbar-bottom" style>
+      <div class="container">
+        <p class="navbar-text pull-left">copyright</p>
+      </div>
+    </div>
     
-	
-	
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
